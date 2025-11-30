@@ -312,3 +312,29 @@
     background: #82d860 !important;
     color: black !important;
 }
+.values-section {
+    direction: rtl;
+}
+.values-section .value-item .icon-wrap {
+    float: right;
+    margin-left: 15px; /* يبقي في مسافة بين الأيقونة والنص */
+}
+.values-section .value-item .icon-wrap {
+    text-align: right;
+}
+.values-section {
+    direction: rtl; /* يخلي كل شيء من اليمين لليسار */
+    text-align: right; /* يخلي النصوص متراصة على اليمين */
+}
+.values-section .value-item {
+    text-align: right;
+}
+
+.values-section .value-item .icon-wrap {
+    text-align: right;
+    float: right; /* لو حابب تبقى جنب النص */
+    margin-left: 15px; /* مسافة بين الأيقونة والنص */
+}
+.hover-click a:hover{
+    color: white;
+}
