@@ -1,0 +1,199 @@
+/*
+ * تنسيقات RTL مخصصة (rtl.css)
+ * هذه التنسيقات تعكس عناصر القالب التي لم يتم عكسها تلقائياً عند وضع dir="rtl"
+ */
+
+/* =================================
+   1. شريط الأدوات العلوي (Header Bar)
+   ================================= */
+.wrap .social-media p {
+    /* تم عكس اتجاه عرض العناصر للحفاظ على الترتيب الافتراضي لـ flex */
+    direction: ltr;
+    text-align: left;
+    /* التأكد من محاذاة أيقونات السوشيال ميديا لليسار في RTL */
+    justify-content: flex-end !important;
+}
+
+
+/* =================================
+   2. قسم الخدمات (Services Section)
+   ================================= */
+.services .d-block.d-flex {
+    /* عكس اتجاه الأيقونة والنص */
+    flex-direction: row-reverse;
+    text-align: right;
+}
+
+.services .media-body {
+    /* إلغاء الـ Padding Right (pr-3) وإضافة Padding Left (لإنشاء مسافة على يسار الأيقونة) */
+    padding-right: 0 !important;
+    padding-left: 1rem !important;
+    text-align: right;
+}
+
+/* =================================
+   3. قسم "لماذا تختارنا" (Why Us List)
+   ================================= */
+.why-us-list .list-item {
+    /* عكس ترتيب الأيقونة والنص */
+    flex-direction: row-reverse;
+    text-align: right;
+}
+
+.why-us-list .list-item .icon {
+    /* إلغاء أي هامش على اليمين وإضافة هامش على اليسار */
+    margin-right: 0 !important;
+    margin-left: 10px !important;
+}
+
+.why-us-list .list-item .text {
+    text-align: right;
+}
+
+/* =================================
+   4. قسم التذييل (Footer)
+   ================================= */
+
+/* محاذاة العناوين والنصوص لليمين */
+.footer-heading,
+.list-unstyled,
+.block-23 {
+    text-align: right;
+}
+
+/* عكس اتجاه أيقونات السوشيال ميديا في الـ Footer */
+.ftco-footer-social {
+    padding-right: 0;
+    direction: ltr;
+    /* للحفاظ على ترتيب الأيقونات من اليسار لليمين داخل الـ flex container */
+    justify-content: flex-end !important;
+}
+
+.ftco-footer-social li.ml-0.mr-3 {
+    /* عكس الهوامش لتبدأ الأيقونات من اليمين */
+    margin-left: 5px !important;
+    margin-right: 0 !important;
+}
+
+/* محاذاة نقاط الاتصال لليمين */
+.block-23 ul,
+.block-23 li {
+    direction: rtl;
+    text-align: right;
+    list-style-type: none;
+    /* إزالة التنقيط إذا كان ظاهراً بشكل معكوس */
+    padding-right: 0;
+}
+
+/* هذا الجزء يجب أن يكون في ملف rtl.css */
+
+/* عكس اتجاه الـ list-item في قسم لماذا تختارنا */
+.why-us-list .list-item {
+    display: flex;
+    flex-direction: row-reverse;
+    /* عكس ترتيب الأيقونة والنص */
+    text-align: right;
+}
+
+.why-us-list .list-item .icon {
+    /* إلغاء أي هامش على اليمين وإضافة هامش على اليسار */
+    margin-right: 0 !important;
+    margin-left: 10px !important;
+}
+
+/* لا حاجة لتعديل النص لأن text-align: right كافية */
+/* هذا الجزء يجب أن يكون في ملف rtl.css */
+
+/* =================================
+   4. قسم التذييل (Footer)
+   ================================= */
+
+/* محاذاة العناوين والنصوص لليمين */
+.footer-heading,
+.list-unstyled,
+.block-23 {
+    text-align: right;
+}
+
+/* تعديل الهوامش لأيقونات السوشيال ميديا */
+.ftco-footer-social {
+    padding-right: 0;
+    /* للحفاظ على ترتيب الأيقونات من اليسار لليمين داخل الـ flex container */
+    direction: ltr;
+    /* تم تغييرها في HTML إلى justify-content-end، ولكن هذا CSS يدعمها عند الحاجة */
+    justify-content: flex-end !important;
+}
+
+.ftco-footer-social li {
+    /* إلغاء الـ Margin Right وإضافة Margin Left ليدفع الأيقونات من اليمين إلى اليسار */
+    margin-left: 5px !important;
+    margin-right: 0 !important;
+}
+
+/* محاذاة نقاط الاتصال لليمين */
+.block-23 ul,
+.block-23 li {
+    direction: rtl;
+    text-align: right;
+    list-style-type: none;
+    padding-right: 0;
+}
+
+/* هذا الجزء يجب أن يكون في ملف rtl.css */
+
+/* =================================
+   5. قائمة التنقل في الهاتف (Mobile Navigation)
+   ================================= */
+@media (max-width: 991.98px) {
+
+    /* تطبيق التنسيق على شاشات الأجهزة اللوحية والصغيرة */
+    .ftco_navbar .navbar-nav {
+        text-align: right;
+        /* محاذاة الروابط النصية لليمين */
+        padding-right: 0;
+        /* إلغاء أي حشوة على اليسار */
+    }
+
+    .ftco_navbar .navbar-nav .nav-item {
+        margin-right: 0;
+        margin-left: 0;
+    }
+
+    .ftco_navbar .navbar-nav .nav-item .nav-link {
+        padding-left: 0;
+        /* التأكد من أن النص يبدأ من أقصى اليمين */
+        padding-right: 1.5rem;
+        /* يمكن إضافة حشوة بسيطة من اليمين للتجميل */
+    }
+}
+
+/* =================================
+   تنسيقات شريط التنقل للهاتف (Mobile)
+   ================================= */
+@media (max-width: 991.98px) {
+
+    /* 1. إبعاد الشعار عن حافة الـ Toggler */
+    .ftco_navbar .navbar-brand {
+        margin-right: 0 !important;
+        /* إلغاء أي هامش يمين سابق */
+        margin-left: 15px !important;
+        /* إضافة هامش يساري لترك مسافة بينه وبين الـ Toggler */
+    }
+
+    /* 2. تصحيح تباعد زر القائمة */
+    .ftco_navbar .navbar-toggler {
+        margin-left: 0;
+        margin-right: 15px;
+        /* يمكن إضافة هامش لليمين إذا كان الزر يحتاج للابتعاد عن الحافة اليسرى */
+    }
+
+    /* 3. تصحيح اتجاه نص زر القائمة (القائمة والأيقونة) */
+    .ftco_navbar .navbar-toggler {
+        /* لعكس ترتيب كلمة "القائمة" والأيقونة */
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+        /* تباعد بسيط بين النص والأيقونة */
+        gap: 5px;
+    }
+}
