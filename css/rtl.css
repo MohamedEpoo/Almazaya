@@ -197,3 +197,118 @@
         gap: 5px;
     }
 }
+
+/* وضع RTL */
+#section-counter {
+    direction: rtl;
+    text-align: center;
+}
+
+/* تنسيق الكروت */
+.counter-wrap {
+    background: #ffffff;
+    padding: 25px 15px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    transition: transform .3s ease, box-shadow .3s ease;
+}
+
+/* تأثير Hover */
+.counter-wrap:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+}
+
+/* أنيميشن دخول */
+.ftco-animate {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all .7s ease-out;
+}
+
+.ftco-animate.fadeInUp.ftco-animated {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* تنسيق الأرقام */
+.block-18 .number {
+    font-size: 48px;
+    font-weight: bold;
+    color: #82d860;
+}
+
+/* RTL */
+.time-open-wrap {
+    direction: rtl;
+    text-align: right;
+}
+
+/* أنيميشن دخول من اليمين */
+.ftco-animate {
+    opacity: 0;
+    transform: translateX(40px);
+    transition: all .8s ease;
+}
+
+.ftco-animate.ftco-animated {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* خلفية الصورة */
+/* حاوية الصورة */
+.img {
+    position: relative;
+    width: 100%;
+    min-height: 450px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+/* الـ Overlay نفسه */
+.img::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    /* بديل top/right/bottom/left */
+    background: rgba(0, 0, 0, 0.45);
+    /* شفافية مظبوطة */
+    z-index: 1;
+}
+
+/* صندوق المحتوى فوق الصورة */
+.time-open-wrap {
+    position: relative;
+    z-index: 2;
+    /* أعلى من الـ overlay */
+    direction: rtl;
+    text-align: right;
+    width: 90%;
+    margin: auto;
+}
+
+/* الصناديق نفسها */
+.time-open-wrap .desc {
+    background: black;
+    backdrop-filter: blur(5px);
+    border-radius: 15px;
+    margin-bottom: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    transition: transform .3s ease, box-shadow .3s ease;
+}
+
+/* Hover */
+.time-open-wrap .desc:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+}
+
+/* البوكس التاني */
+.time-open-wrap .bg-secondary {
+    background: #82d860 !important;
+    color: black !important;
+}
